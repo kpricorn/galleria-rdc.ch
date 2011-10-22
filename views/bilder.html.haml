@@ -1,0 +1,12 @@
+- @page_title = "Bilder / Maletgs"
+- @nav_style = "nav3"
+
+= partial 'shared/menu'
+
+%script{ :type => "text/javascript", :charset => "utf-8" }
+  $('#link_bilder').addClass('current');
+
+#content
+  = partial 'shared/gallery', :locals => { :folder => 'bilder' }
+
+= partial 'shared/fancybox'

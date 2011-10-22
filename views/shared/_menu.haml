@@ -1,0 +1,17 @@
+.nav(class="#{@nav_style}")
+  #menu
+    .span-3{ :onmouseover => "$('#link_aktuell').text('actual')", :onmouseout => "$('#link_aktuell').text('aktuell')" }
+      %a{:href => "aktuell.html", :id => "link_aktuell"}
+        aktuell
+    .span-3{ :onmouseover => "$('#link_portrait').text('portret')", :onmouseout => "$('#link_portrait').text('portrait')" }
+      %a{:href => "portrait.html", :id => "link_portrait"}
+        portrait
+    .span-3{ :onmouseover => "$('#link_bilder').text('maletgs')", :onmouseout => "$('#link_bilder').text('bilder')" }
+      %a{:href => "bilder.html", :id => "link_bilder"}
+        bilder
+    .span-3{ :onmouseover => "$('#link_tueren').text('escha')", :onmouseout => "$('#link_tueren').text('türen')" }
+      %a{:href => "tueren.html", :id => "link_tueren"}
+        türen
+    .span-3.append-1.last{ :onmouseover => "$('#link_kontakt').text('contact')", :onmouseout => "$('#link_kontakt').text('kontakt')" }
+      %a{:href => "kontakt.html", :id => "link_kontakt"}
+        kontakt
