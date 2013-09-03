@@ -7,6 +7,8 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :livereload
+activate :foundation_navigation
+activate :bourbon
 
 configure :build do
   activate :minify_css

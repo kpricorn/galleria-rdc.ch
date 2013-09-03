@@ -1,0 +1,25 @@
+#header {
+  .banner {
+    height: 231px;
+  }
+}
+
+.index { .banner { background-image: image-url(image_path('banner/index.jpg')); }}
+.aktuell { .banner { background-image: image_path('banner/aktuell.jpg'); }}
+.portrait { .banner { background-image: image_path('banner/portrait.jpg'); }}
+.bilder { .banner { background-image: image_path('banner/bilder.jpg'); }}
+.tueren { .banner { background-image: image_path('banner/tueren.jpg'); }}
+.kontakt { .banner { background-image: image_path('banner/kontakt.jpg'); }}
+
+#footer {
+  min-height: 3em;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  .logo {
+    height: 39px;
+    background-repeat: no-repeat;
+    background-position: right;
+    @include background-image(image_url("logo_bg_footer.gif"));
+  }
+  @include retina-image('bg/wood_1', 100% 100%, $asset-pipeline: true);
+}

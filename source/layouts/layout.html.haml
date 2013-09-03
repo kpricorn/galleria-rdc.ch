@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title= current_page.data.title || "Galleria RdC"
+
+    %link{ rel: "apple-touch-icon-precomposed apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
+    %link{ rel: "shortcut icon", href: "favicon.png" }
+    %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
+
+    = stylesheet_link_tag "app"
+    = javascript_include_tag "modernizr.js"
+    = javascript_include_tag "//use.typekit.net/iof8zoc.js"
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+  %body{class: page_classes}
+    %header#header
+      .banner
+      = partial 'navigation'
+    #content-container.row
+      = yield
+    %footer#footer
+      .row
+        .social.columns.large-3
+          %span
+            %iframe.twitter-share-button.link.external.twitter-count-none{:allowtransparency => "true", "data-twttr-rendered" => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/tweet_button.1375828408.html#_=1378224186345&count=none&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Fgalleria-rdc.ch%2Faktuell.html&size=m&text=Galleria%20RdC%20-%20Aktuell%20%2F%20Actual&url=http%3A%2F%2Fgalleria-rdc.ch%2Faktuell.html", :style => "width: 56px; height: 20px;", :title => "Twitter Tweet Button"}
+            %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+          %span
+            %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/like.php?href=http%3a%2f%2fde-de.facebook.com%2fpages%2fgalleria-dart-rdc%2f137046719699949&layout=button_count&show_faces=true&width=450&action=like&font&colorscheme=dark&height=21", :style => "border:none; overflow:hidden; width:105px; height:21px;"}
+        %p.directions.columns.large-6
+          Rico de Castelberg | Via Alpsu 2 | 7180 Disentis/Mustér
+        .logo.columns.large-3
+    = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
+    = javascript_include_tag  "all"
+
+    = yield_content :assets
