@@ -14,4 +14,6 @@
 //= require foundation/foundation.tooltips
 //= require foundation/foundation.topbar
 
+//= require vendor/jquery.slides
+
 //= require script

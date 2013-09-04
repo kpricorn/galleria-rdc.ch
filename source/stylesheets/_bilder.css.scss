@@ -1,0 +1,32 @@
+@import "compass/css3/filter";
+
+.bilder {
+  .slide {
+    @include grid-column(12);
+    .no-touch &:hover img {
+      @include filter(grayscale(20%));
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    .no-touch & {
+      @include filter(grayscale(100%));
+    }
+  }
+  .slide {
+    text-align: center;
+  }
+}
+
+@media #{$small} {
+  .bilder {
+    .slide {
+      @include grid-column(4);
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+  }
+}
+
