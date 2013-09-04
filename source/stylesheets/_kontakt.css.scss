@@ -1,0 +1,30 @@
+.kontakt {
+  .map, .address, .social {
+    padding-bottom: 2em;
+  }
+  .map {
+    @include grid-column(12);
+    .no-touch & img:hover  { @include filter(grayscale(20%)); }
+    .no-touch & img { @include filter(grayscale(100%)); }
+  }
+  .address {
+    @include grid-column(12);
+  }
+  .social {
+    @include grid-column(12);
+  }
+}
+
+@media #{$small} {
+  .kontakt {
+    .map {
+      @include grid-column(8);
+    }
+    .address {
+      @include grid-column(4);
+    }
+    .social {
+      @include grid-column(12);
+    }
+  }
+}

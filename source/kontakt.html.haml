@@ -1,0 +1,18 @@
+.map
+  = link_to 'https://www.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=galleria+d\'art+RdC,+Via+Alpsu+2,+Disentis%2FMust%C3%A9r,+Svizra&aq=0&oq=galle&sll=46.707279,8.850324&sspn=0.008387,0.029311&vpsrc=0&t=h&ie=UTF8&hq=galleria+d\'art+RdC,&hnear=Via+Alpsu+2,+7180+Disentis%2FMust%C3%A9r,+Grigioni,+Switzerland&ll=46.707441,8.858521&spn=0.008387,0.021136&z=16&iwloc=A&cid=13941637317888883044' do
+    = image_tag 'http://maps.google.com/maps/api/staticmap?center=46.7056696,8.8544509&zoom=16&size=640x300&maptype=roadmap&sensor=false&language=&markers=color:red|label:none|46.7056696,8.8544509'
+.address
+  %p
+    Rico de Castelberg
+    %br
+    Via Alpsu 2
+    %br
+    7180 Disentis/Must&eacute;r
+    %br
+    +41 81 947 51 43
+    %br
+    = mail_to 'rico@galleria-rdc.ch'
+
+.social
+  %iframe{ :src => "http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fde-de.facebook.com%2Fpages%2Fgalleria-dart-RdC%2F137046719699949&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=80", :scrolling=>"no", :frameborder=>"0", :style=>"border:none; overflow:hidden; width:450px; height:80px;", :allowTransparency=>"true" }
+
