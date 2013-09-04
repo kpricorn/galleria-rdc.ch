@@ -1,15 +1,16 @@
 .portrait {
   .img {
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    @include retina-image('portrait', size(auto 80px), $extension: jpg, $asset-pipeline: true);
     @include grid-column(12);
   }
   .cv {
     padding-top: 3em;
     @include grid-column(12);
+    ul { margin-left: 2em; };
   }
 }
 

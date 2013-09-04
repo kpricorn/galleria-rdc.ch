@@ -22,20 +22,22 @@
   %body{class: page_classes}
     %header#header-container
       .banner
+        .logo-container
+          .logo
       = partial 'navigation'
     #content-container
       = yield
     %footer#footer-container
       .footer
-        .social.columns.large-3
+        .social
           %span
             %iframe.twitter-share-button.link.external.twitter-count-none{:allowtransparency => "true", "data-twttr-rendered" => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/tweet_button.1375828408.html#_=1378224186345&count=none&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Fgalleria-rdc.ch%2Faktuell.html&size=m&text=Galleria%20RdC%20-%20Aktuell%20%2F%20Actual&url=http%3A%2F%2Fgalleria-rdc.ch%2Faktuell.html", :style => "width: 56px; height: 20px;", :title => "Twitter Tweet Button"}
             %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
           %span
             %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/like.php?href=http%3a%2f%2fde-de.facebook.com%2fpages%2fgalleria-dart-rdc%2f137046719699949&layout=button_count&show_faces=true&width=450&action=like&font&colorscheme=dark&height=21", :style => "border:none; overflow:hidden; width:105px; height:21px;"}
-        %p.directions.columns.large-6
+        %p.directions
           Rico de Castelberg | Via Alpsu 2 | 7180 Disentis/Mustér
-        .logo.columns.large-3
+        .logo
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.1.min.js"
     = javascript_include_tag  "all"
 

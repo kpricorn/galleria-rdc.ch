@@ -1,33 +1,67 @@
 #header-container {
   .banner {
-    height: 231px;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+
+    .index    > & { background-image: image-url(image_path('banner/index.jpg')); }
+    .aktuell  > & { background-image: image-url(image_path('banner/aktuell.jpg')); }
+    .portrait > & { background-image: image-url(image_path('banner/portrait.jpg')); }
+    .bilder   > & { background-image: image-url(image_path('banner/bilder.jpg')); }
+    .tueren   > & { background-image: image-url(image_path('banner/tueren.jpg')); }
+    .kontakt  > & { background-image: image-url(image_path('banner/kontakt.jpg')); }
+
+    .logo-container {
+      @include grid-row;
+      .logo {
+        margin-top: 2em;
+        padding-top: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: image-url(image_path('logo.svg'));
+      }
+    }
   }
 }
 
-#content-container, #footer-container {
+#content-container, .footer {
   @include grid-row;
 }
-
-.index { .banner { background-image: image-url(image_path('banner/index.jpg')); }}
-.aktuell { .banner { background-image: image-url(image_path('banner/aktuell.jpg')); }}
-.portrait { .banner { background-image: image-url(image_path('banner/portrait.jpg')); }}
-.bilder { .banner { background-image: image-url(image_path('banner/bilder.jpg')); }}
-.tueren { .banner { background-image: image-url(image_path('banner/tueren.jpg')); }}
-.kontakt { .banner { background-image: image-url(image_path('banner/kontakt.jpg')); }}
 
 #content-container {
   padding-bottom: 3em;
 }
 
 #footer-container {
+  background-color: black;
   min-height: 3em;
   padding-top: 3em;
   padding-bottom: 5em;
-  .logo {
-    height: 39px;
-    background-repeat: no-repeat;
-    background-position: right;
-    @include background-image(image_url("logo_bg_footer.gif"));
+  color: grey;
+  .footer {
+    .logo {
+      height: 39px;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      background-image: image-url(image_path('logo.svg'));
+    }
   }
-  @include retina-image('bg/wood_1', 100% 100%, $asset-pipeline: true);
+}
+
+#header-container {
+  .banner {
+    .logo-container {
+      .logo {
+        @include grid-column(8, $offset: 4);
+}}}}
+
+@media #{$small} {
+  #header-container {
+    .banner {
+      .logo-container {
+        .logo {
+          @include grid-column(4, $offset: 8);
+  }}}}
 }
