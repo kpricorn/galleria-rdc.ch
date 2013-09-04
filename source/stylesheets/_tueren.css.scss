@@ -1,7 +1,7 @@
 @import "compass/css3/filter";
 
-.bilder {
-  .bild {
+.tueren {
+  .tuer {
     @include grid-column(12);
     .no-touch &:hover img {
       @include filter(grayscale(20%));
@@ -14,16 +14,16 @@
       @include filter(grayscale(100%));
     }
   }
-  .bild {
+  .tuer {
     text-align: center;
   }
 }
 
 @media #{$small} {
-  .bilder {
-    .bild {
-      @include grid-column(4);
-      &:nth-child(3n+4) {
+  .tueren {
+    .tuer {
+      @include grid-column(3);
+      &:nth-child(4n+5) {
         clear: left;
       }
     }
