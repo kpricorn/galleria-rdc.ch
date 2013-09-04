@@ -10,3 +10,8 @@ gem "middleman-smusher"
 gem "middleman-foundation-navigation"
 gem "middleman-bourbon"
 gem "middleman-favicon-maker"
+gem "middleman-disqus"
+gem "middleman-blog"
+gem "nokogiri"
+
+gem "pry"

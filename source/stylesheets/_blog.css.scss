@@ -1,0 +1,54 @@
+@import "compass/typography/lists/horizontal-list";
+@import "compass/css3/border-radius";
+
+.blog {
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+  h1, h2, h3, h4, h5 {
+    text-align: center;
+  }
+
+  .slides {
+    display: none;
+    position: relative;
+
+    ul.slidesjs-pagination {
+      padding-top: 12px !important;
+      @include horizontal-list;
+      li a {
+        width: 20px;
+        height: 20px;
+      }
+      li a {
+        cursor: pointer;
+        @include hide-text;
+        background-color: $secondary-color;
+        width: 20px;
+        height: 20px;
+        display: block;
+        @include border-radius(10px);
+        &:hover, &.active {
+          background-color: $primary-color;
+        }
+      }
+    }
+    .slidesjs-navigation {
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      @include hide-text;
+    }
+    .slidesjs-next {
+      right: 0;
+      @include image('slider/slider-arrow-right', $height: true, $width: true);
+      &:hover { @include image('slider/slider-arrow-right-hover', $height: true, $width: true); }
+    }
+    .slidesjs-previous {
+      left: 1em;
+      @include image('slider/slider-arrow-left', $height: true, $width: true);
+      &:hover { @include image('slider/slider-arrow-left-hover', $height: true, $width: true); }
+    }
+  }
+}

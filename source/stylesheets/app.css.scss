@@ -25,7 +25,7 @@
 // @import "foundation/components/keystrokes";
 // @import "foundation/components/labels";
 // @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
+@import "foundation/components/pagination";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
 // @import "foundation/components/side-nav";
@@ -38,9 +38,11 @@
 // @import "foundation/components/dropdown";
 
 @import "bourbon";
+@import "mixins";
 @import "style";
 
 @import "portrait";
 @import "bilder";
 @import "tueren";
 @import "kontakt";
+@import "blog";
