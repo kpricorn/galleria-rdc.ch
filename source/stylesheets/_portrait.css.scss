@@ -1,0 +1,21 @@
+.portrait {
+  .img {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    @include grid-column(12);
+  }
+  .cv {
+    padding-top: 3em;
+    @include grid-column(12);
+  }
+}
+
+@media #{$small} {
+  .portrait {
+    .img { @include grid-column(4); }
+    .cv { @include grid-column(8); }
+  }
+}

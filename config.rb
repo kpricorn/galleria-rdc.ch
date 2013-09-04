@@ -17,4 +17,5 @@ configure :build do
   activate :relative_assets
   require "middleman-smusher"
   activate :smusher
+  activate :favicon_maker
 end
