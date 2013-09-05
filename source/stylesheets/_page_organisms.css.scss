@@ -1,0 +1,7 @@
+body.organisms {
+  #content-container {
+    @import 'atoms';
+    @import 'molecules';
+    @import 'organisms';
+  }
+}

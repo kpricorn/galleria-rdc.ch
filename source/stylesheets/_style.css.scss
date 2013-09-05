@@ -24,8 +24,14 @@
   }
 }
 
+.center {
+  text-align: center !important;
+}
+
 #content-container, .footer {
   @include grid-row;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 #content-container {

@@ -1,0 +1,9 @@
+---
+title: Organisms
+---
+
+- article = blog.articles.sample
+
+== partial 'article_summary', :locals => { :article => article }
+
+== partial 'article', :locals => { :article => article }

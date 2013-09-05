@@ -1,0 +1,16 @@
+sdc:
+  fname: Sebastian
+  lname: de Castelberg
+  url: /about/
+  title: software engineer
+  title_url: /web-design/
+  org: gorilla software GmbH
+  org_url: /
+  org_full_url: http://gorillasoftware.ch
+  # Email encoder: <http://bit.ly/4qXtQh>
+  email: "&#121;&#111;&#117;&#114;&#110;&#097;&#109;&#101;&#064;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;"
+  tel: +41 44 508 07 73
+  tel_url: +41-44-508-07-73
+  locality: Zürich
+  postal_code: 8005
+  country_name: CH

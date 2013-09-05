@@ -1,0 +1,12 @@
+article.hentry[itemprop='blogPost' itemscope itemtype='http://schema.org/BlogPosting']
+  header
+    == partial 'article_date', :locals => { :datetime => article.date }
+
+  div
+    == partial 'article_headline', :locals => { :article => article, :single_article => true }
+    div.entry-content[itemprop='articleBody']
+      == article.body
+
+  footer
+    == partial 'article_tags', :locals => { :tags => article.tags }
+    == disqus

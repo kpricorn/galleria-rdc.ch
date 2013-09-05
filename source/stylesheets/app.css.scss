@@ -48,3 +48,10 @@
 @import "page_kontakt";
 @import "page_atoms";
 @import "page_molecules";
+@import "page_organisms";
+
+#content-container {
+  @import 'atoms';
+  @import 'molecules';
+  @import 'organisms';
+}

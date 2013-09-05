@@ -20,6 +20,7 @@ activate :blog do |blog|
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
   blog.paginate = true
+  blog.summary_separator = /(READMORE)/
 end
 
 activate :livereload
