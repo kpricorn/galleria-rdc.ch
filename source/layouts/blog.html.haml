@@ -1,15 +1,12 @@
 - wrap_layout :layout do
   .row
-    %article.content.columns.large-8
-      %h1= current_page.data.title
-      %h6.subheader
-        Datum:
-        %time= current_page.date.strftime('%e.%m.%Y')
-      .separator
-        .line.line-1
-      = yield
-      .separator
-        .line.line-1
+    .content.columns.large-8
+      %article
+        %h1= current_page.data.title
+        %h6.subheader
+          Datum:
+          %time= current_page.date.strftime('%e.%m.%Y')
+        = yield
       = disqus
     %aside.nav.columns.large-4
       = partial 'blog_nav'
