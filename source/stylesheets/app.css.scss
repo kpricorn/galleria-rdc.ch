@@ -1,3 +1,5 @@
+@import "bourbon";
+
 @import "settings";
 
 @import "foundation/components/global"; // *always required
@@ -37,12 +39,12 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
-@import "bourbon";
 @import "mixins";
 @import "style";
 
-@import "portrait";
-@import "bilder";
-@import "tueren";
-@import "kontakt";
-@import "aktuell";
+@import "page_portrait";
+@import "page_bilder";
+@import "page_tueren";
+@import "page_kontakt";
+@import "page_atoms";
+@import "page_molecules";

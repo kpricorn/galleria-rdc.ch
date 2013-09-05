@@ -13,5 +13,6 @@ gem "middleman-favicon-maker"
 gem "middleman-disqus"
 gem "middleman-blog"
 gem "nokogiri"
+gem 'slim'
 
 gem "pry"

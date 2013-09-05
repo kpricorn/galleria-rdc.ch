@@ -114,6 +114,9 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     sass (3.2.10)
+    slim (2.0.1)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
     slop (3.4.6)
     smusher (0.4.9)
       httpclient (>= 2.2)
@@ -131,6 +134,7 @@ GEM
       tilt (~> 1.1)
     subexec (0.2.3)
     syntax (1.0.0)
+    temple (0.6.6)
     thor (0.18.1)
     tilt (1.3.7)
     tzinfo (0.3.37)
@@ -154,4 +158,5 @@ DEPENDENCIES
   middleman-smusher
   nokogiri
   pry
+  slim
   zurb-foundation

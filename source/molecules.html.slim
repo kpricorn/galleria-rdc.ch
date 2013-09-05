@@ -1,0 +1,47 @@
+---
+title: Molecules
+---
+
+- content_for :assets do
+  == javascript_include_tag 'slideshow'
+
+== partial 'article_tags', locals: { tags: %w{Code JavaScript Underscore} }
+
+.slides
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+  == image_tag 'http://placehold.it/1000x429', itemprop: 'image'
+
+== partial 'article_headline', locals: { single_article: false, article: page_articles.last }
+
+== partial 'article_headline', locals: { single_article: true, article: page_articles.last }
+
+.footnotes
+  ol
+    li id='fn:1'
+      p
+        Thanks for the
+        =< link_to "clarification!", "http://www.reddit.com/r/javascript/comments/1dscmr/functional_tricks_with_underscorecontrib/c9te10l"
+        =< link_to '↩', "atoms#fnref:1", rel: "reference"
+
+aside(id="article-nav")
+  ul
+    li(id="article-nav-left")
+      == link_to "/previous" do
+        span> <
+        | Previous article
+    li(id="article-nav-right")
+      == link_to "/next" do
+        span> >
+        | Next article
+
+li(itemprop="itemListElement")
+  ==link_to 'Article title', '/foo'
+  span<> published on
+  time== partial 'article_date', locals: { datetime: DateTime.now }
+
+== disqus
+

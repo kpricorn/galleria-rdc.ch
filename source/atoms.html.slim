@@ -1,0 +1,76 @@
+---
+title: Atoms
+---
+
+h1 Header 1
+h2 Header 2
+h3 Header 3
+h4 Header 4
+h5 Header 5
+h6 Header 6
+
+h1.subheader Subheader 1
+h2.subheader Subheader 2
+h3.subheader Subheader 3
+h4.subheader Subheader 4
+h5.subheader Subheader 5
+h6.subheader Subheader 6
+
+hr
+
+br
+
+== partial 'article_date', locals: { datetime: DateTime.now }
+
+br
+
+p= lorem.paragraph
+
+== image_tag 'http://placehold.it/350x150', itemprop: 'image'
+== image_tag 'http://placehold.it/150x350', itemprop: 'image'
+== image_tag 'http://placehold.it/1024x768', itemprop: 'image'
+== image_tag 'http://placehold.it/768x1024', itemprop: 'image'
+
+br
+
+== link_to 'google', 'http://www.google.com'
+
+br
+
+sup id='fnref:1'
+  == link_to '1', 'fn:1', rel: 'footnote'
+
+br
+
+p
+  | This is
+  strong<> strong
+  | text
+
+p
+  | This is
+  em<> emphasized
+  | text
+
+br
+
+li<>(id='article-nav-left') <
+
+br
+
+li<>(id='article-nav-right') >
+
+br
+
+.read-more== link_to '/article' do
+  | Read more about
+  ==lorem.words 5
+  | …
+
+br
+
+a.slidesjs-previous.slidesjs-navigation(href='#' title='Previous')
+
+br
+
+a.slidesjs-next.slidesjs-navigation(href='#' title='Next')
