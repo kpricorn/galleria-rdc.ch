@@ -1,23 +1,31 @@
-###
-# Helpers
-###
+helpers do
+  def title
+    title = "Galleria RdC"
+    page_title = current_page.data.title
+    if page_title.present?
+      title = "#{page_title} | #{title}"
+    end
+    title
+  end
+end
+
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-activate :livereload
-activate :foundation_navigation
-activate :bourbon
-activate :directory_indexes
-
 activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.layout = "layouts/blog"
+  blog.prefix = "aktuell"
+  blog.layout = "layouts/aktuell"
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
   blog.paginate = true
 end
+
+activate :livereload
+activate :foundation_navigation
+activate :bourbon
+activate :directory_indexes
 
 configure :build do
   activate :minify_css

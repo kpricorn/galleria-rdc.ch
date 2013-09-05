@@ -1,12 +1,10 @@
 #header-container {
   .banner {
-    height: 230px;
     background-position: center;
     background-size: cover;
 
     .index    > & { background-image: image-url(image_path('banner/index.jpg')); }
     .aktuell  > & { background-image: image-url(image_path('banner/aktuell.jpg')); }
-    .blog     > & { background-image: image-url(image_path('banner/blog.jpg')); }
     .portrait > & { background-image: image-url(image_path('banner/portrait.jpg')); }
     .bilder   > & { background-image: image-url(image_path('banner/bilder.jpg')); }
     .tueren   > & { background-image: image-url(image_path('banner/tueren.jpg')); }
@@ -55,7 +53,7 @@
   .banner {
     .logo-container {
       .logo {
-        @include grid-column(8, $offset: 4);
+        @include grid-column(4);
 }}}}
 
 @media #{$small} {
