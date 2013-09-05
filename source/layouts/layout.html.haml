@@ -23,7 +23,8 @@
     %header#header-container
       .banner
         .logo-container
-          .logo
+          = link_to '/' do
+            .logo
       = partial 'navigation'
     #content-container
       = yield

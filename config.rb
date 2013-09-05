@@ -15,8 +15,9 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :blog do |blog|
+  blog.per_page = 1
   blog.prefix = "aktuell"
-  blog.layout = "layouts/aktuell"
+  #blog.layout = "layouts/aktuell"
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
   blog.paginate = true

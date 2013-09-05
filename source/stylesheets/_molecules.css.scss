@@ -1,9 +1,5 @@
 @import "compass/typography/lists/horizontal-list";
 
-body {
-  background: red;
-}
-
 ul.tags {
   @include horizontal-list;
 }
@@ -50,4 +46,8 @@ ul.tags {
       }
     }
   }
+}
+
+p.more {
+  margin-top: 30px;
 }

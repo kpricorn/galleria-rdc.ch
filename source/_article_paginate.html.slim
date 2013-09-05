@@ -1,0 +1,12 @@
+nav[aria-labelledby='pagination' role='navigation']
+  ul
+    - if prev_page
+      li.prev: a[href='#{prev_page.url}' rel='prev'] Newer
+    - if page_number && num_pages
+      li.page
+        = page_number
+        span &#160;of&#160;
+        = num_pages
+    - if next_page
+      li.next: a[href='#{next_page.url}' rel='next'] Older
+hr

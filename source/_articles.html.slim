@@ -1,0 +1,6 @@
+- page_articles.each do |article|
+  == partial 'article_summary', :locals => { :article => article }
+  hr
+
+- if paginate
+  == partial 'article_paginate', object: self
