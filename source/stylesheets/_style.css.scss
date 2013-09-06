@@ -46,12 +46,30 @@
   padding-bottom: 5em;
   color: grey;
   .footer {
+    .social, .directions, .logo {
+      @include grid-column(12);
+      padding-bottom: 2em;
+    }
+    .social {
+      iframe {
+        margin: 0 0.3em;
+      }
+      text-align: center;
+      span {
+        display: inline-block;
+      }
+    }
+    .directions {
+      text-align: center;
+    }
     .logo {
-      height: 39px;
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: contain;
-      background-image: image-url(image_path('logo.svg'));
+      .img {
+        height: 39px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: image-url(image_path('logo.svg'));
+      }
     }
   }
 }
@@ -70,4 +88,16 @@
         .logo {
           @include grid-column(4, $offset: 8);
   }}}}
+  #footer-container {
+    .footer {
+      .social {
+        @include grid-column(3);
+      }
+      .directions {
+        text-align: center;
+        @include grid-column(6);
+      }
+      .logo {
+        @include grid-column(3);
+  }}}
 }
