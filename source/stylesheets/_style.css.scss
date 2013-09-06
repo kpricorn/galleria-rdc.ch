@@ -64,7 +64,7 @@ a {
   padding-bottom: 5em;
   color: grey;
   .footer {
-    .social, .directions, .logo {
+    .social, .directions, .logo, .gs {
       @include grid-column(12);
       padding-bottom: 2em;
     }
@@ -87,6 +87,25 @@ a {
         background-position: center;
         background-size: contain;
         background-image: image-url(image_path('logo.svg'));
+      }
+    }
+    .gs {
+      margin-top: 3em;
+      .img {
+        @include transition(all 0.3s);
+        display: block;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        @include image('gs', $height: true, $width: true);
+        @include filter(grayscale(100%));
+        opacity: 0.5;
+        border-radius: 32px;
+        box-shadow: #666 0 0 20px;
+        border: 2px solid #999;
+        &:hover {
+          opacity: 1;
+          @include filter(grayscale(0%));
+        }
       }
     }
     .license {
