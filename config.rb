@@ -37,6 +37,7 @@ configure :build do
   require "middleman-smusher"
   activate :smusher
   activate :favicon_maker
+  ignore "/styleguide/*"
 end
 
 activate :disqus do |d|
