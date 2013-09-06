@@ -12,7 +12,7 @@ gem "middleman-bourbon"
 gem "middleman-favicon-maker"
 gem "middleman-disqus"
 gem "middleman-blog"
-gem "middleman-deploy"
+gem 'middleman-s3_sync'
 gem "nokogiri"
 gem 'slim'
 gem "therubyracer"
