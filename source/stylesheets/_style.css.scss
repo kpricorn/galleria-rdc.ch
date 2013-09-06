@@ -21,10 +21,7 @@ a {
       .logo {
         margin-top: 2em;
         padding-top: 10%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: image-url(image_path('logo.svg'));
+        @include image('logo');
       }
     }
   }
@@ -83,10 +80,7 @@ a {
     .logo {
       .img {
         height: 39px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        background-image: image-url(image_path('logo.svg'));
+        @include image('logo');
       }
     }
     .gs {
