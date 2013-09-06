@@ -43,5 +43,12 @@ li(itemprop="itemListElement")
   span<> published on
   time== partial 'article_date', locals: { datetime: DateTime.now }
 
+ul.articles-nav
+  li.article-prev
+    a(href='/aktuell/page/2' rel='prev') ←
+  li.article-page 3 / 10
+  li.article-next
+    a(href='/aktuell/page/3' rel='next') →
+
 == disqus
 

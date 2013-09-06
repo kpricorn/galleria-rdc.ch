@@ -2,5 +2,4 @@
   == partial 'article_summary', :locals => { :article => article }
   hr
 
-- if paginate
-  == partial 'article_paginate', object: self
+== partial 'article_paginate', locals: locals

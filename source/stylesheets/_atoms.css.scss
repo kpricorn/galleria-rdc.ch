@@ -35,7 +35,8 @@ em {
   }
 }
 
-li.slidesjs-pagination-item > a, a.slidesjs-navigation, #article-nav-left, #article-nav-right {
+li.slidesjs-pagination-item > a,
+a.slidesjs-navigation {
   font-weight: 600;
   display: inline-block;
   width: 30px;
@@ -49,4 +50,8 @@ li.slidesjs-pagination-item > a, a.slidesjs-navigation, #article-nav-left, #arti
   header, h1, h2, h3, h4, h5, h6 {
     text-align: inherit;
   }
+}
+
+li {
+  list-style-type: none;
 }

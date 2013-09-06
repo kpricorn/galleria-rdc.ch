@@ -1,9 +1,5 @@
 @import "compass/typography/lists/horizontal-list";
 
-ul.tags {
-  @include horizontal-list;
-}
-
 .slides {
   .slidesjs-container {
     box-shadow: #999 0 0 5px;
@@ -15,11 +11,11 @@ ul.tags {
     top: 50%;
     color: $primary-color;
     background-color: #e6e6e6;
+    z-index: 10;
     &:hover {
       background-color: $primary-color;
       color: #e6e6e6;
     }
-    z-index: 10;
     @include hide-text;
     &.slidesjs-previous {
       left: 5px;
@@ -50,4 +46,22 @@ ul.tags {
 
 p.more {
   margin-top: 30px;
+}
+
+ul.articles-nav {
+  text-align: center;
+  li {
+    padding: 0 1em;
+    display: inline-block;
+  }
+}
+
+ul.tags {
+  list-style: none; margin: 0; padding: 0;
+  display: inline;
+  li {
+    display: inline;
+    &:after { content: " / "; } 
+    &:last-child:after { content: ""; }
+  }
 }
