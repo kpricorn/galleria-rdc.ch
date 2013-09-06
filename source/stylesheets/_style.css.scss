@@ -1,3 +1,9 @@
+@import "compass/css3/filter";
+
+a {
+  @include transition(all 0.3s);
+}
+
 #header-container {
   .banner {
     background-position: center;
@@ -40,6 +46,18 @@
 }
 
 #footer-container {
+  .footer {
+    @include transition(opacity 0.3s);
+    @include filter(grayscale(100%));
+    opacity: 0.5;
+  }
+  &:hover .footer {
+    opacity: 1;
+    @include filter(grayscale(0%));
+  }
+}
+
+#footer-container {
   background-color: black;
   min-height: 3em;
   padding-top: 3em;
@@ -71,6 +89,13 @@
         background-image: image-url(image_path('logo.svg'));
       }
     }
+    .license {
+      .cc-logo, .cc-text {
+        padding-bottom: 0.8em;
+        text-align: center;
+        @include grid-column(12);
+      }
+    }
   }
 }
 
@@ -99,5 +124,18 @@
       }
       .logo {
         @include grid-column(3);
-  }}}
+      }
+      .license {
+        .cc-logo, .cc-text {
+          text-align: inherit;
+        }
+        .cc-logo {
+          @include grid-column(3);
+        }
+        .cc-text {
+          @include grid-column(9);
+        }
+      }
+    }
+  }
 }
