@@ -15,5 +15,7 @@ gem "middleman-blog"
 gem "middleman-deploy"
 gem "nokogiri"
 gem 'slim'
+gem "therubyracer"
+gem "oj"
 
 gem "pry"
