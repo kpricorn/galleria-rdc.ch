@@ -48,11 +48,24 @@ p.more {
   margin-top: 30px;
 }
 
-ul.articles-nav {
-  text-align: center;
-  li {
-    padding: 0 1em;
-    display: inline-block;
+nav.article-navigation > .articles-nav,
+nav.page-pagination > .articles-nav {
+  padding: 1em 0;
+  .article-page {
+    @include grid-column(2);
+    text-align: center;
+  }
+  .article-prev {
+    @include grid-column(5);
+    text-align: right;
+  }
+  .article-next {
+    @include grid-column(5);
+    text-align: left;
+  }
+  .articles-archive {
+    text-align: center;
+    @include grid-column(12);
   }
 }
 

@@ -1,13 +1,21 @@
 - if paginate
-  nav[aria-labelledby='pagination' role='navigation']
-  - if page_number && num_pages && num_pages > 1
-    ul.articles-nav
-      - if prev_page
-        li.article-prev: a[href='#{prev_page.url}' rel='prev'] ←
-      li.article-page
-        =' page_number
-        | /
-        =< num_pages
-      - if next_page
-        li.article-next: a[href='#{next_page.url}' rel='next'] →
+  nav.page-pagination[aria-labelledby='pagination' role='navigation']
+    - if page_number && num_pages && num_pages > 1
+      .articles-nav
+        .article-prev
+          - if prev_page
+            a[href='#{prev_page.url}' rel='prev'] ←
+          - else
+            | &nbsp;
+        .article-page
+          ' –
+          =' page_number
+          | /
+          =<> num_pages
+          | –
+        .article-next
+          - if next_page
+            a[href='#{next_page.url}' rel='next'] →
+          - else
+            | &nbsp;
     hr
