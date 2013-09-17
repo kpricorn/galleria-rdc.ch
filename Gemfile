@@ -13,6 +13,8 @@ gem "middleman-favicon-maker"
 gem "middleman-disqus"
 gem "middleman-blog"
 gem 'middleman-s3_sync'
+gem "middleman-google-analytics", github: 'kpricorn/middleman-google-analytics', branch: 'features/domain_name_and_allow_linker'
+
 gem "nokogiri"
 gem 'slim'
 gem "therubyracer"

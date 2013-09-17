@@ -26,10 +26,11 @@
             .logo
       = partial 'navigation'
     #content-container
-      = yield
+      #content= yield
     %footer#footer-container
       = partial 'footer'
     = javascript_include_tag "http://code.jquery.com/jquery-latest.min.js"
     = javascript_include_tag  "all"
 
     = yield_content :assets
+    = google_analytics_tag

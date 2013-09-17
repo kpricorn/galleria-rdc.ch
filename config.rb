@@ -51,3 +51,7 @@ activate :s3_sync do |s3_sync|
   s3_sync.region      = 'eu-west-1'
   s3_sync.prefer_gzip = true
 end
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-44091607-1'
+end
