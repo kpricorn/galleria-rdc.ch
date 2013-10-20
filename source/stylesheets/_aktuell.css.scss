@@ -43,13 +43,9 @@
     }
     .slidesjs-next {
       right: 0;
-      @include image('slider/slider-arrow-right', $height: true, $width: true);
-      &:hover { @include image('slider/slider-arrow-right-hover', $height: true, $width: true); }
     }
     .slidesjs-previous {
       left: 1em;
-      @include image('slider/slider-arrow-left', $height: true, $width: true);
-      &:hover { @include image('slider/slider-arrow-left-hover', $height: true, $width: true); }
     }
   }
 }
