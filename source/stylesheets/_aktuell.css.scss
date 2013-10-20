@@ -26,7 +26,6 @@
       }
       li a {
         cursor: pointer;
-        @include hide-text;
         background-color: $secondary-color;
         width: 20px;
         height: 20px;
@@ -41,7 +40,6 @@
       z-index: 10;
       position: absolute;
       top: 50%;
-      @include hide-text;
     }
     .slidesjs-next {
       right: 0;
